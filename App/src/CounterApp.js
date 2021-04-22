@@ -4,7 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {increase, decrease} from '../redux/actions/actions';
 
 const CounterApp = (props) => {
-  const value = useSelector(state => state.counter);
+  const value = useSelector(state => state.counterReducer.counter);
   
   const dispatch = useDispatch();
 
