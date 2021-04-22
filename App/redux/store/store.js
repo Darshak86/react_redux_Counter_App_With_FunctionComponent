@@ -1,10 +1,10 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
-import {counterReducer} from "../reducers/reducers";
 
-// const rootReducer = combineReducers({
-//   counterReducer
-// });
 
-// export const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
-  export const store = createStore(counterReducer);
+// import combineReducers from "../reducers/rootReducers";
+// export const store = createStore(combineReducers, applyMiddleware(ReduxThunk));
+
+
+ import counterReducer from "../reducers/reducers";
+ export const store = createStore(counterReducer, applyMiddleware(ReduxThunk));
